@@ -1,0 +1,67 @@
+<h1>  Home  </h1>
+<h1>  Dashboard  </h1>
+<h1>  Logout  </h1>
+
+<div class='menu-container'>
+  <div class='card-header col-md-10'>
+    <h2>
+      &#127869 Dashboard
+    </h2>
+  </div>
+  {{#each posts as |post|}}
+    <div class='dish col-md-5'>
+      <p>
+        {{post.id}}.
+        {{post.post_name}}
+      </p>
+    </div>
+    <div class='col-md-7'>
+      <p>
+        Guest:
+        {{post.user_name}}
+      </p>
+    </div>
+  {{/each}}
+  <div class='add-post-container'>
+    <h2>
+      Please enter your blog below!
+    </h2>
+    <form class='new-dish-form'>
+      <label for='blog_name'>
+        Blog Name:
+      </label>
+      <br />
+      <textarea id='blog_name' name='dish_name' rows='2' cols='30'>
+        {{dish_name}}
+      </textarea>
+      <br />
+      <label for='description'>
+        Description:
+      </label>
+      <br />
+      <textarea id='description' name='description' rows='5' cols='30'>
+        {{description}}
+      </textarea>
+      <br />
+      <label for='guest_name'>
+        Guest Name:
+      </label>
+      <br />
+      <textarea id='guest_name' name='guest_name' rows='2' cols='30'>
+        {{guest_name}}
+      </textarea>
+      <br />
+      <br />
+      <input type='checkbox' id='has_nuts' name='has_nuts' value='true' />
+      <label for='has_nuts'>
+        Check box if this dish contains nuts
+      </label>
+      <br />
+      <button type='submit' value='Submit'>
+        Submit
+      </button>
+    </form>
+  </div>
+</div>
+<!-- This is the form for adding a new dish -->
+<script src='/js/add-dish.js'></script>
