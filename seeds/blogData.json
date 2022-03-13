@@ -6,5 +6,9 @@
     {
         "title": "test two",
         "body": "some random blogs"
+    },
+    {
+        "title": "test three",
+        "body": "another random blogs"
     }
 ]
