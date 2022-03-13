@@ -8,31 +8,31 @@
       &#127869 Dashboard
     </h2>
   </div>
-  {{#each posts as |post|}}
-    <div class='dish col-md-5'>
+  {{#each blogs as |blog|}}
+    <div class='blog col-md-5'>
       <p>
-        {{post.id}}.
-        {{post.post_name}}
+        {{blog.id}}.
+        {{blog.blog_name}}
       </p>
     </div>
     <div class='col-md-7'>
       <p>
         Guest:
-        {{post.user_name}}
+        {{blog.user_name}}
       </p>
     </div>
   {{/each}}
-  <div class='add-post-container'>
+  <div class='add-blog-container'>
     <h2>
       Please enter your blog below!
     </h2>
-    <form class='new-dish-form'>
+    <form class='new-blog-form'>
       <label for='blog_name'>
         Blog Name:
       </label>
       <br />
-      <textarea id='blog_name' name='dish_name' rows='2' cols='30'>
-        {{dish_name}}
+      <textarea id='blog_name' name='blog_name' rows='2' cols='30'>
+        {{blog_name}}
       </textarea>
       <br />
       <label for='description'>
@@ -51,17 +51,12 @@
         {{guest_name}}
       </textarea>
       <br />
-      <br />
-      <input type='checkbox' id='has_nuts' name='has_nuts' value='true' />
-      <label for='has_nuts'>
-        Check box if this dish contains nuts
-      </label>
-      <br />
+
       <button type='submit' value='Submit'>
         Submit
       </button>
     </form>
   </div>
 </div>
-<!-- This is the form for adding a new dish -->
-<script src='/js/add-dish.js'></script>
+<!-- This is the form for adding a new blog -->
+<script src='/js/add-blog.js'></script>
