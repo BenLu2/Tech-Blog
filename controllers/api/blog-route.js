@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Blog = require('../models/Post');
+const Blog = require('../models/Blog');
 
 // get one post without serializing data
 // router.get('/Blog/:id', async (req, res) => {
