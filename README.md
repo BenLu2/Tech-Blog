@@ -15,3 +15,5 @@ and run `npm install`, `node server.js` and open your browser at **localhost:300
 Or
 
 You can visit https://yudong-note-taker.herokuapp.com/notes directly to use this app from the Heroku website!
+
+To login, you can use the seeded user email and password, for example, email `sal@hotmail.com` and password `password12345`
