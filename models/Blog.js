@@ -4,11 +4,11 @@ class Blog extends Model { }
 
 Blog.init(
     {
-        title: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        body: {
+        description: {
             type: DataTypes.STRING,
             allowNull: false,
         },
