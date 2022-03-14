@@ -1,14 +1,14 @@
 [
     {
-        "title": "test",
-        "body": "blog number one is awesome!"
+        "name": "test",
+        "description": "blog number one is awesome!"
     },
     {
-        "title": "test two",
-        "body": "some random blogs"
+        "name": "test two",
+        "description": "some random blogs"
     },
     {
-        "title": "test three",
-        "body": "another random blogs"
+        "name": "test three",
+        "description": "another random blogs"
     }
 ]
