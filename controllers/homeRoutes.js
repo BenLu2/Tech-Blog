@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Blog } = require('../models')
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -30,6 +31,21 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/dashboard', async (req, res) => {
+  if (req.session.user_id) {
+      const myBlogs = await Blog.findAll({
+          where: {
+              user_id: req.session.user_id
+          }, raw: true
+      })
+      res.render('dashboard',{ logged_in: req.session.logged_in, myBlogs: myBlogs});
+  }
+  else {
+      console.log("you aren't logged in")
+      res.render("login")
+  }
 });
 
 module.exports = router;
