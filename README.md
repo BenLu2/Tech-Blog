@@ -10,7 +10,7 @@ Please install Sequelize and express-session npm package for authentication befo
 
 You can via clone the Github link: https://github.com/BenLu2/NoteTaker.git
 
-and run `npm install`, `node server.js` and open your browser at **localhost:3001** to access this app
+and run `npm install`, `npm run seed` use `node server.js` and open your browser at **localhost:3001** to access this app
 
 
 To login, you can use the seeded user email and password, for example, email `sal@hotmail.com` and password `password12345`
