@@ -14,6 +14,15 @@ router.post("/save", withAuth, async (req,res) => {
     res.json(justSaved)
 })
 
+router.post("/savecomment", withAuth, async (req,res) => {
+  let justSaved = await Comments.create({
+    body: req.body.body,
+    user_id: req.session.user_id
+  })
+  console.log("saved comment", justSaved)
+  res.json(justSaved)
+})
+
 router.put('/update/:id', async (req, res) => {
   try {
     const updateCategory = await Category.update(req.body,{

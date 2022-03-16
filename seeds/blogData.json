@@ -1,17 +1,15 @@
 [
     {
         "title": "test",
-        "body": "blog number one is awesome!",
-        "user_id": 1
+        "body": "blog number one is awesome!"
+  
     },
     {
         "title": "test two",
-        "body": "some random blogs",
-        "user_id": 2
+        "body": "some random blogs"
     },
     {
         "title": "test three",
-        "body": "another random blogs",
-        "user_id": 3
+        "body": "another random blogs"
     }
 ]

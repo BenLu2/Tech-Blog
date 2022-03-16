@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
             raw: true,
             nest: true
         })
-        res.render('home', {logged_in: req.session.logged_in, allPosts: databasePosts, userComments: postComments})
+        res.render('homepage', {logged_in: req.session.logged_in, allPosts: databasePosts, userComments: postComments})
     }
     catch (err) {
         console.log(err)
