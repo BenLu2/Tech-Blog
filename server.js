@@ -22,31 +22,17 @@ const PORT = process.env.PORT || 3002;
 
 // boilerplate session code, stores people who are online
 const sess = {
-    secret: "Super secret secret",
-    resave: false,
-    saveUninitialized: false,
-    // sets the amount of time somebody can be logged in for I believe? I think it resets every time you hit a route..
-    // needs some more investigating. currently set to 10 minutes
-    cookie: {
-      maxAge: 600000
-    },
-    store: new SequelizeStore({
-        db: sequelize,
-      }),
-}
-app.use(session(sess))
+  secret: 'secret secret',
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
-// boilerplate handlebars code
-const hbs = exphbs.create({});
-app.engine("handlebars", hbs.engine);
-app.set("view engine", "handlebars");
-
-// Imports the post model
-// const post = require("./models/post")
-
-// lets us view the req.body after a post request
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+// Add express-session and store as Express.js middleware
+app.use(session(sess));
 
 // makes the express package use the routes to connect it all together!
 app.use(routes)
