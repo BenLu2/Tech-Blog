@@ -1,6 +1,7 @@
 [
     {
         "title": "test",
+<<<<<<< HEAD
         "body": "blog number one is awesome!"
   
     },
@@ -11,5 +12,16 @@
     {
         "title": "test three",
         "body": "another random blogs"
+=======
+        "description": "blog number one is awesome!"
+    },
+    {
+        "title": "test two",
+        "description": "some random blogs"
+    },
+    {
+        "title": "test three",
+        "description": "another random blogs"
+>>>>>>> parent of 6f17e3e (add add blog function)
     }
 ]
