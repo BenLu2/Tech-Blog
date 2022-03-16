@@ -6,7 +6,7 @@ $("#signup-btn").on("click", function(e) {
         password: $("#signup-pw").val(),
     }
     console.log("new post data", newUser)
-        fetch("/users/signup", {
+        fetch("/api/users/signup", {
         method: "POST",
         headers: {
             "Accept": "application/json",

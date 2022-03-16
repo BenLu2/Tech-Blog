@@ -1,13 +1,13 @@
 async function newFormHandler(event) {
     event.preventDefault();
-    const blog_name = document.querySelector('#blog_name').value.trim();
+    const blog_name = document.querySelector('#title').value.trim();
     const description = document.querySelector('#description').value.trim();
     const user_name = document.querySelector('#user_name').value.trim();
         // Send fetch request to add a new post
-    const response = await fetch(`/api/blog`, {
+    const response = await fetch('/api/blog', {
       method: 'POST',
       body: JSON.stringify({
-        blog_name,
+        title,
         description,
         user_name,
       }),
