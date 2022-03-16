@@ -1,47 +1,72 @@
 [
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
    
 =======
 >>>>>>> parent of 6f17e3e (add add blog function)
     "userName": "Sal",
+=======
+    "name": "sal",
+    "username": "Sal",
+>>>>>>> parent of 3526a89 (redo)
     "email": "sal@hotmail.com",
     "password": "password12345"
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> parent of 6f17e3e (add add blog function)
     "userName": "Lernantino",
+=======
+    "name": "lernan",
+    "username": "Lernantino",
+>>>>>>> parent of 3526a89 (redo)
     "email": "lernantino@gmail.com",
     "password": "password12345"
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> parent of 6f17e3e (add add blog function)
     "userName": "Amiko",
+=======
+    "name": "amiko",
+    "username": "Amiko",
+>>>>>>> parent of 3526a89 (redo)
     "email": "amiko2k20@aol.com",
     "password": "password12345"
   },
   {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> parent of 6f17e3e (add add blog function)
     "userName": "Jordan",
+=======
+    "name": "jordan",
+    "username": "Jordan",
+>>>>>>> parent of 3526a89 (redo)
     "email": "jordan99@msn.com",
     "password": "password12345"
   },
   {
+<<<<<<< HEAD
 <<<<<<< HEAD
 
     "userName": "Blake",
 =======
     "name": "Blake",
 >>>>>>> parent of 6f17e3e (add add blog function)
+=======
+    "name": "blake",
+    "username": "Blake",
+>>>>>>> parent of 3526a89 (redo)
     "email": "the_blake@yahoo.com",
     "password": "password12345"
   }

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 3526a89 (redo)
 {{#each users as |user| }}
 <div class="row align-center mb-5">
   <div class="col-md-6">
@@ -10,6 +13,21 @@
 </div>
 {{/each}}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> parent of 569eb7d (changes)
+=======
+
+
+<h4 class="center">View All Posts</h4>
+<input type="hidden" name="blog-id" value="{{blog.id}}" />
+{{#each blogs as |blog| }}
+<div class="divider"></div>
+  <div class="section">
+    <h5>{{blog.title}}</h5>
+    <p>{{blog.description}}</p>
+    <p>bloged By: {{blog.user_id}} on {{format_date createdAt}}</p>
+  </div>
+{{/each}}
+>>>>>>> parent of 3526a89 (redo)

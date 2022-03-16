@@ -1,3 +1,4 @@
+
 async function newFormHandler(event) {
     event.preventDefault();
     const blog_name = document.querySelector('#title').value.trim();
@@ -22,15 +23,3 @@ async function newFormHandler(event) {
       alert('Failed to add blog');
     }
   }
-<<<<<<< HEAD
-};
-
-
-document.querySelector('#new-blog-form').addEventListener('submit', newBlogForm);
-
-console.log(document.querySelector('#new-blog-form'))
-=======
-  
-  document.querySelector('.new-blog-form').addEventListener('submit', newFormHandler);
-    
->>>>>>> parent of 6f17e3e (add add blog function)

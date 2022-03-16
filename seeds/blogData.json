@@ -2,6 +2,7 @@
     {
         "title": "test",
 <<<<<<< HEAD
+<<<<<<< HEAD
         "body": "blog number one is awesome!"
   
     },
@@ -23,5 +24,19 @@
         "title": "test three",
         "description": "another random blogs"
 >>>>>>> parent of 6f17e3e (add add blog function)
+=======
+        "description": "blog number one is awesome!",
+        "user_id": 1
+    },
+    {
+        "title": "test two",
+        "description": "some random blogs",
+        "user_id": 2
+    },
+    {
+        "title": "test three",
+        "description": "another random blogs",
+        "user_id": 3
+>>>>>>> parent of 3526a89 (redo)
     }
 ]
