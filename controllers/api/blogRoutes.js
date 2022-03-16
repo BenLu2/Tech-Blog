@@ -1,19 +1,25 @@
 const router = require('express').Router();
-const Blog = require('../../models');
+const { Blog } = require('../../models');
 
-// get one post without serializing data
-// router.get('/Blog/:id', async (req, res) => {
-//   try {
-//     const blogData = await Blog.findByPk(req.params.id);
-//     console.log(blogData)
-//     res.render('dish', blogData);
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+
+
+router.post('/', async(req, res) => {
+
+  console.log('Creat Post route smacked')
+  try {
+      const newBlog = await Blog.create({
+          ...req.body,
+          user_id: req.session.user_id,
+      });
+
+      res.status(200).json(newBlog);
+  } catch (err) {
+      res.status(400).json(err);
+  }
+});
 
 // get one blog with serialized data
-router.get('/Blog/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
   try {
   // Search the database for a dish with an id that matches params
   const BlogData = await Blog.findByPk(req.params.id);

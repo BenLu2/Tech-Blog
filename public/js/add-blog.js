@@ -8,7 +8,7 @@ var newBlogForm = async(e) => {
 
   console.log(title, description)
 
-  const response = await fetch('/api/blog/', {
+  const response = await fetch('/api/blog', {
       method: 'POST',
       body: JSON.stringify({
           title: title,

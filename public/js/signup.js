@@ -1,20 +1,16 @@
-console.log('Signup js file loaded')
+const signupForm = async(event) => {
 
-var signupForm = async(e) => {
+    event.preventDefault()
 
-    e.preventDefault()
-
-    const username = document.querySelector('#username-signup').value.trim()
-    const name = document.querySelector('#name-signup').value.trim()
-    const password = document.querySelector('#password-signup').value.trim()
-    const email = document.querySelector('#email-signup').value.trim()
+    const username = document.querySelector('#signup-username').value.trim()
+    const password = document.querySelector('#signup-pw').value.trim()
+    const email = document.querySelector('#signup-email').value.trim()
 
     console.log(username, password, email)
 
-    const response = await fetch('/api/user/', {
+    const response = await fetch('/api/users/signup', {
         method: 'POST',
         body: JSON.stringify({
-            name,
             username,
             password,
             email
@@ -27,5 +23,5 @@ var signupForm = async(e) => {
         alert('Failed to sign up');
     }
 };
-
+console.log('Signup js file loaded')
 document.querySelector('.signup-form').addEventListener('submit', signupForm);

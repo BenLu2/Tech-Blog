@@ -35,23 +35,32 @@ router.post('/login', async (req, res) => {
     res.status(400).json(err);
   }
 });
-router.post("/signup", async (req, res) => {
+
+
+router.post('/signup', async(req, res) => {
+
+  console.log('Signup Post Route smacked')
+
   try {
-      const newUserData = await User.create({
-        userName: req.body.userName,
-        email: req.body.email,
-        password: req.body.password,
-      }, {raw: true});
+      const userData = await User.create({
+          username: req.body.username,
+          password: req.body.password,
+          email: req.body.email,
+      })
+      console.log('User Created', userData)
+
       req.session.save(() => {
-        req.session.user_id = newUserData.id
-        req.session.logged_in = true;
-        res.json({message: "You are now logged in"})
-      });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-})
+          req.session.user_id = userData.id;
+          req.session.username = userData.username;
+          req.session.logged_in = true;
+
+          res.json(userData)
+      })
+  } catch (err) {
+      res.status(400).json(err);
+  }
+});
+
 router.post('/logout', (req, res) => {
   if (req.session.logged_in) {
     // Remove the session variables
