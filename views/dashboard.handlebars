@@ -1,48 +1,27 @@
-<div class='menu-container'>
-  <div class='card-header col-md-10'>
-    <h2>
-       Dashboard
-    </h2>
-  </div>
-
-  <h4 class="center">View All Blogs</h4>
-  {{#each blogs as |blog|}}
-    <div class='blog col-md-5'>
-      <p>
-        {{blog.id}}.
-        {{blog.title}}
-        {{blog.description}}
-      </p>
-    </div>
-  {{/each}}
-
-<div class="container">
-  <form class="col s12" id="new-blog-form">
-    <div class="row center-align">
-      <div class="col s12">
-        <div class="card blue-grey darken-1">
-          <div class="card-content white-text">
-            <span class="card-title">New Blog</span>
-            <input type="hidden" name="blog-id" value="{{blog.id}}" />
-            <div class="row">
-              <div class="input-field col s6">
-                <input id="blog-title" type="text" class="validate">
-                <label for="blog-title">Title</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <textarea id="blog-body" class="materialize-textarea" name="blog-body"></textarea>
-                <label for="textarea1">Description</label>
-              </div>
-            </div>
-            <button class="btn waves-effect waves-light submit" type="submit" name="action" id="submit">Submit
-              <i class="material-icons right"></i>
-            </button>
-          </div>
-        </div>
+<div class="row justify-space-between-md">
+  <div class="login-card">
+    <h2 class="page-title">Past and Future Posts</h2>
+    <form class="form login-form">
+      <div class="form-group">
+        <label>Title</label>
+        <input class="form-input" type="text" id="newPost-title" />
       </div>
-    </div>
-  </form>
+      <div class="form-group">
+        <label>Body</label>
+        <input class="form-input" size="50" type="text" id="newPost-body" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit" id="newPost-btn">Create Post</button>
+      </div>
+    </form>
+  </div>
 </div>
 
+{{!-- Edit / delete posts that are written by user --}}
+{{#each myPosts as |post|}}
+{{> post-details}}
+ <a href="/posts/{{id}}">
+  <p>Edit Post</p>
+  </a>
+  <button name={{id}} class="delete-btn">Delete Post</button>
+{{/each}}
