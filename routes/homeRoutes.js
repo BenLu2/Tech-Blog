@@ -3,12 +3,12 @@
 const router = require("express").Router()
 const Post = require("../models/Post")
 const User = require("../models/User")
-const Comments = require("../models/Comments")
+const Comment = require("../models/Comment")
 const withAuth = require("../utils/auth")
 
 router.get("/", async (req, res) => {
     try {
-        const postComments = await Comments.findAll({
+        const postComments = await Comment.findAll({
             include: [
                 {model: User}
             ],
