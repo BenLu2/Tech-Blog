@@ -1,4 +1,4 @@
-<div class="container">
+{{!-- <div class="container">
   <form class="col s12" id="new-post-form">
     <div class="row center-align">
       <div class="col s12">
@@ -26,6 +26,23 @@
       </div>
     </div>
   </form>
+</div> --}}
+
+
+<form class="col s12" id="new-post-form">
+<div class="container">
+<span class="card-title">New Post</span>
+<input type="hidden" name="post-id" value="{{post.id}}" />
+<div class="form-group">
+  <label for="post-title">Title:</label>
+  <input type="text" class="form-control" id="post-title">
+</div>
+<div class="form-group">
+  <label for="comment">Comment:</label>
+  <textarea class="form-control" rows="5" id="post-body"></textarea>
+</div>
+<button class=".btn-primary" type="submit" name="action" id="submit">Submit</button>
+</form>
 </div>
 
 <script src="/js/new-post.js"></script>
