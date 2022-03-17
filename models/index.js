@@ -1,23 +1,29 @@
-<<<<<<< HEAD
-const Post = require("./Post")
-const User = require("./User")
-const Comments = require('./Comments')
+// Setting relationships and importing models
+const User = require('./User')
+const Post = require('./Post')
+const Comment = require('./Comment')
 
-Blog.belongsTo(User, {
-    foreignKey: "user_id", // check syntax for the 3 foreign keys
-    onDelete: "CASCADE",
+User.hasMany(Post, {
+    foreignKey: 'user_id',
+});
+
+Post.belongsTo(User, {
+    foreignKey: 'user_id',
+});
+
+Post.hasMany(Comment, {
+    foreignKey: 'post_id',
 })
 
-module.exports = {Post, User, Comments}
-=======
-const User = require('./User');
-const Blog = require("./Blog")
+User.hasMany(Comment, {
+    foreignKey: 'user_id',
+});
 
-Blog.belongsTo(User, {
-    foreignKey: "user_id", 
-    onDelete: "CASCADE",
-})
+Comment.belongsTo(User, {
+    foreignKey: 'user_id',
+});
 
 
-module.exports = { Blog, User };
->>>>>>> parent of 3526a89 (redo)
+
+
+module.exports = { User, Post, Comment };

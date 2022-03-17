@@ -1,14 +1,11 @@
 const router = require('express').Router();
-const blogRoutes = require('./blogRoutes');
-const userRoutes = require('./userRoutes');
-const homeRoutes = require('../homeRoutes');
+
+const userRoutes = require('./userRoutes.js');
+const postRoutes = require('./postRoutes.js');
 
 
-router.use('/users', userRoutes);
-<<<<<<< HEAD
-router.use("/blogRoutes", blogRoutes)
-=======
-router.use("/blog", blogRoutes)
->>>>>>> parent of 3526a89 (redo)
-router.use("../homeRoutes", homeRoutes)
+router.use('/user', userRoutes);
+router.use('/post', postRoutes);
+
+
 module.exports = router;

@@ -1,42 +1,28 @@
 [
     {
         "title": "test",
-<<<<<<< HEAD
-<<<<<<< HEAD
-        "body": "blog number one is awesome!"
+        "content": "blog number one is awesome!",
+        "user_id":1
   
     },
     {
         "title": "test two",
-        "body": "some random blogs"
+        "content": "some random blogs",
+        "user_id":2
     },
     {
         "title": "test three",
-        "body": "another random blogs"
-=======
-        "description": "blog number one is awesome!"
+        "content": "another random blogs",
+        "user_id":3
     },
     {
-        "title": "test two",
-        "description": "some random blogs"
+        "title": "test four",
+        "content": "this random blogs",
+        "user_id":4
     },
     {
-        "title": "test three",
-        "description": "another random blogs"
->>>>>>> parent of 6f17e3e (add add blog function)
-=======
-        "description": "blog number one is awesome!",
-        "user_id": 1
-    },
-    {
-        "title": "test two",
-        "description": "some random blogs",
-        "user_id": 2
-    },
-    {
-        "title": "test three",
-        "description": "another random blogs",
-        "user_id": 3
->>>>>>> parent of 3526a89 (redo)
+        "title": "test five",
+        "content": "that random blogs",
+        "user_id":5
     }
 ]

@@ -1,25 +1,31 @@
+var newPostForm = async(e) => {
+  e.preventDefault();
 
-async function newFormHandler(event) {
-    event.preventDefault();
-    const blog_name = document.querySelector('#title').value.trim();
-    const description = document.querySelector('#description').value.trim();
-    const user_name = document.querySelector('#user_name').value.trim();
-        // Send fetch request to add a new post
-    const response = await fetch('/api/blog', {
+  console.log('new post function loaded')
+
+  const title = document.querySelector('#post-title').value.trim()
+  const content = document.querySelector('#post-body').value.trim()
+
+  console.log(title, content)
+
+  const response = await fetch('/api/post/', {
       method: 'POST',
       body: JSON.stringify({
-        title,
-        description,
-        user_name,
+          title: title,
+          content: content
       }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-    //if the post is added, the 'all' template will be rerendered
-    if (response.ok) {
-      document.location.replace('/');
-    } else {
-      alert('Failed to add blog');
-    }
+      headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+      document.location.replace('/dashboard');
+  } else {
+      alert('Failed to create post');
   }
+};
+
+
+document.querySelector('#new-post-form').addEventListener('submit', newPostForm);
+
+console.log('NEW POST JS FILE LOADED!!')
+console.log(document.querySelector('#new-post-form'))

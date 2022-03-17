@@ -1,17 +1,23 @@
 [
     {
-        "body": "Comment number one"
+        "user_id":1,
+        "post_id":1,
+        "comment_content": "Comment number one"
     },
-    {
-        "body": "Comment number two"
+    {   "user_id":2,
+        "post_id":2,
+        "comment_content": "Comment number two"
     },
-    {
-        "body": "Comment number three"
+    {   "user_id":3,
+        "post_id":3,
+        "comment_content": "Comment number three"
     },
-    {
-        "body": "Comment number four"
+    {   "user_id":4,
+        "post_id":4,
+        "comment_content": "Comment number four"
     },
-    {
-        "body": "Comment number five"
+    {   "user_id":5,
+        "post_id":5,
+        "comment_content": "Comment number five"
     }
 ]
