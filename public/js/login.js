@@ -17,14 +17,14 @@ var loginForm = async(e) => {
       });
 
       if (response.ok) {
-          document.location.replace('/dashboard');
+          document.location.replace('/');
       } else {
           alert('Failed to login');
       }
   };
 }
 
-document.querySelector('#login-form').addEventListener('submit', loginForm);
+document.querySelector('.login-form').addEventListener('submit', loginForm);
 
 console.log('LOGIN JS FILE LOADED!!')
 console.log(document.querySelector('#login-form'))

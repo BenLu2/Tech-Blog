@@ -21,7 +21,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li><a href="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
       <li><a href="/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+      <li> <button class="btn" id="logout">logout</button></li>
     </ul>
   </div>
 </nav>
@@ -39,9 +39,11 @@
   </footer>
   <script src="/js/signup.js"></script>
   <script src="/js/login.js"></script>
-  <script src="/js/logout.js"></script>
   <script src='/js/add-blog.js'></script>
 
+{{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>

@@ -1,31 +1,21 @@
-<div class="row justify-space-between-md">
-  <div class="signup-card">
-    <h2 class="page-title">Signup</h2>
-      <form class="form signup-form">
-        <div class="form-group">
-          <input id="name-signup" class="validate" />
-        <label class="active" for="name">Name</label>
-  </div>
-    <div class="form-group">
-      <input id="username-signup" class="validate" />
-      <label class="active" for="username">Username</label>
-    </div>
-    <div class="form-group">
-      <input id="password-signup" type="password" class="validate" />
-      <label class="active" for="password">Password</label>
-    </div>
+<form action="/action_page.php" class="form signup-form">
   <div class="form-group">
-     <input id="email-signup" type="email" class="validate" />
-      <label class="active" for="email">Email</label>
-      <div class="row center-align">
-  <button class=".btn-primary" type="submit" name="action" id="submit">Signup </button>
+    <label for="username">Name:</label>
+    <input type="username" class="form-control" id="name-signup">
   </div>
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="username" class="form-control" id="username-signup">
   </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" id="password-signup">
+  </div>
+   <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email-signup">
+  </div>
+  <button class="btn btn-primary" type="submit" name="action" id="submit">Submit</button>
 </form>
-<div class="row center-align">
-  <a href="/login" class="btn">
-    <h6>Login Instead</h6>
-  </a>
-</div>
-</div>
+
 <script src="/js/signup.js"></script>

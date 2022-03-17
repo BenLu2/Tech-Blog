@@ -12,11 +12,11 @@ const logout = async(e) => {
     console.log('logout route smacked')
 
     if (response.ok) {
-        document.location.replace('/');
+        document.location.replace('/login');
         alert('You are logged out!')
     } else {
         alert('Failed to log out, try again');
     }
 };
 
-document.querySelector('#logout-link').addEventListener('click', logout);
+document.querySelector('#logout').addEventListener('click', logout);
