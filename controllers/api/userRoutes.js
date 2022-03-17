@@ -30,41 +30,74 @@ router.post('/', async(req, res) => {
 })
 
 // Login post route
-router.post('/login', async(req, res) => {
-    console.log("Caling the login route ", req.body);
+// router.post('/login', async(req, res) => {
+//     console.log("Caling the login route ", req.body);
+//     try {
+//         // DB query to find username
+//         const userData = await User.findOne({ where: { username: req.body.username } });
+//         console.log("user exists ", userData);
+//         if (!userData) {
+//             res
+//                 .status(400)
+//                 .json({ message: 'No account found! Please try again' });
+//             return;
+//         }
+
+//         // Checking password for validation
+//         const validPassword = userData.checkPassword(req.body.password);
+//         console.log("Valid password", validPassword);
+//         if (!validPassword) {
+//             res
+//                 .status(400)
+//                 .json({ message: 'Incorrect username or password, please try again' });
+//             return;
+//         }
+
+//         req.session.save(() => {
+//             req.session.user_id = userData.id;
+//             req.session.username = userData.username;
+//             req.session.logged_in = true;
+
+//             res.json({ user: userData, message: 'Success! You are now logged in!' });
+//         });
+
+//     } catch (err) {
+//         res.status(400).json(err);
+//     }
+// });
+
+router.post('/login', async (req, res) => {
     try {
-        // DB query to find username
-        const userData = await User.findOne({ where: { username: req.body.username } });
-        console.log("user exists ", userData);
-        if (!userData) {
-            res
-                .status(400)
-                .json({ message: 'No account found! Please try again' });
-            return;
-        }
-
-        // Checking password for validation
-        const validPassword = userData.checkPassword(req.body.password);
-        console.log("Valid password", validPassword);
-        if (!validPassword) {
-            res
-                .status(400)
-                .json({ message: 'Incorrect username or password, please try again' });
-            return;
-        }
-
-        req.session.save(() => {
-            req.session.user_id = userData.id;
-            req.session.username = userData.username;
-            req.session.logged_in = true;
-
-            res.json({ user: userData, message: 'Success! You are now logged in!' });
-        });
-
+      const userData = await User.findOne({ where: { email: req.body.email } });
+  
+      if (!userData) {
+        res
+          .status(400)
+          .json({ message: 'Incorrect email or password, please try again' });
+        return;
+      }
+  
+      const validPassword = await userData.checkPassword(req.body.password);
+  
+      if (!validPassword) {
+        res
+          .status(400)
+          .json({ message: 'Incorrect email or password, please try again' });
+        return;
+      }
+  
+      req.session.save(() => {
+        req.session.user_id = userData.id;
+        req.session.logged_in = true;
+        
+        res.json({ user: userData, message: 'You are now logged in!' });
+      });
+  
     } catch (err) {
-        res.status(400).json(err);
+      res.status(400).json(err);
     }
-});
+  });
+
 
 // Logout post route
 router.post('/logout', (req, res) => {
